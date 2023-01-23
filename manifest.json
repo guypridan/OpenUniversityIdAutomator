@@ -2,17 +2,21 @@
     "name": "My Extension",
     "manifest_version": 3,
     "version": "1.0.1",
-
     "description": "Automate the loging proccess for the open university webpage",
+    "action": {
+        "default_title": "Click here to enter your ID",
+        "default_popup": "popup.html"
+    },
     "icons": {
         "16": "Images/16Logo.png",
         "48": "Images/48Logo.png",
         "128": "Images/128Logo.png"
     },
-    
     "content_scripts": [
         {
-            "matches": ["https://sso.apps.openu.ac.il/login*"]
+            "matches": ["https://sso.apps.openu.ac.il/login*",
+                        "https://sheilta.apps.openu.ac.il/pls/mtl/student.login*"],
+            "js": ["Script.js"]
         }
     ]
 }
