@@ -1,5 +1,5 @@
 {
-    "name": "My Extension",
+    "name": "ID shortcut for Open university websites",
     "manifest_version": 3,
     "version": "1.0.1",
     "description": "Automate the loging proccess for the open university webpage",
@@ -12,6 +12,7 @@
         "48": "Images/48Logo.png",
         "128": "Images/128Logo.png"
     },
+    "permissions": ["storage"],
     "content_scripts": [
         {
             "matches": ["https://sso.apps.openu.ac.il/login*",
